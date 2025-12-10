@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katalog Mobil - ShopRent</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>ShopRent</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="catalog.html" class="active">Katalog</a></li>
+                <li><a href="services.html">Layanan</a></li>
+                <li><a href="booking.html" class="btn-nav">Pesan Sekarang</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Katalog Mobil Kami</h1>
+            <p>Pilih mobil impian Anda dari koleksi lengkap kami</p>
+        </div>
+    </section>
+
+    <!-- Catalog Section -->
+    <section class="catalog-section">
+        <div class="container">
+            <div class="filter-section">
+                <h3>Filter Mobil</h3>
+                <div class="filter-group">
+                    <label>Tipe Mobil:</label>
+                    <select id="filterType">
+                        <option value="">Semua Tipe</option>
+                        <option value="mpv">MPV</option>
+                        <option value="sedan">Sedan</option>
+                        <option value="suv">SUV</option>
+                        <option value="compact">Compact Car</option>
+                        <option value="compact">Mini Bus</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="catalog-grid">
+                <!-- Car 1 -->
+                <div class="catalog-card">
+                    <img src="avanza.png" alt="Toyota Avanza">
+                    <div class="card-content">
+                        <h3>Toyota Avanza</h3>
+                        <p class="car-type">MPV / 7 Penumpang</p>
+                        <ul class="car-features">
+                            <li>AC Otomatis</li>
+                            <li>Power Steering</li>
+                            <li>Airbag Ganda</li>
+                            <li>Kotak Pertama</li>
+                        </ul>
+                        <div class="price-table">
+                            <div class="price-row">
+                                <span>Lepas Kunci</span>
+                                <span class="price">Rp 350.000/24jam</span>
+                            </div>
+                            <div class="price-row">
+                                <span>Supir + BBM</span>
+                                <span class="price">Rp 550.000/24jam</span>
+                            </div>
+                        </div>
+                        <a href="detail.html?car=avanza" class="btn-primary">Lihat Detail</a>
+                    </div>
+                </div>
+
+                <!-- Car 2 -->
+                <div class="catalog-card">
+                    <img src="honda jazz.jpg" alt="Honda Jazz">
+                    <div class="card-content">
+                        <h3>Honda Jazz</h3>
+                        <p class="car-type">Compact Car / 5 Penumpang</p>
+                        <ul class="car-features">
+                            <li>AC Digital</li>
+                            <li>Power Window</li>
+                            <li>Sensor Parkir</li>
+                            <li>Bluetooth</li>
+                        </ul>
+                        <div class="price-table">
+                            <div class="price-row">
+                                <span>Lepas Kunci</span>
+                                <span class="price">Rp 450.000/24jam</span>
+                            </div>
+                            <div class="price-row">
+                                <span>Supir + BBM</span>
+                                <span class="price">Rp 700.000/24jam</span>
+                            </div>
+                        </div>
+                        <a href="detail.html?car=jazz" class="btn-primary">Lihat Detail</a>
+                    </div>
+                </div>
+
+                <!-- Car 3 -->
+                <div class="catalog-card">
+                    <img src="camry.webp" alt="Toyota Camry">
+                    <div class="card-content">
+                        <h3>Toyota Camry</h3>
+                        <p class="car-type">Sedan / 5 Penumpang</p>
+                        <ul class="car-features">
+                            <li>AC Panorama</li>
+                            <li>Cruise Control</li>
+                            <li>Rear Seat DVD</li>
+                            <li>Sunroof</li>
+                        </ul>
+                        <div class="price-table">
+                            <div class="price-row">
+                                <span>Lepas Kunci</span>
+                                <span class="price">Rp 600.000/24jam</span>
+                            </div>
+                            <div class="price-row">
+                                <span>Supir + BBM</span>
+                                <span class="price">Rp 850.000/24jam</span>
+                            </div>
+                        </div>
+                        <a href="detail.html?car=camry" class="btn-primary">Lihat Detail</a>
+                    </div>
+                </div>
+
+                <!-- Car 4 -->
+                <div class="catalog-card">
+                    <img src="xenia.png" alt="Daihatsu Xenia">
+                    <div class="card-content">
+                        <h3>Daihatsu Xenia</h3>
+                        <p class="car-type">MPV / 7 Penumpang</p>
+                        <ul class="car-features">
+                            <li>AC Manual</li>
+                            <li>Power Steering</li>
+                            <li>Airbag Depan</li>
+                            <li>FM Radio</li>
+                        </ul>
+                        <div class="price-table">
+                            <div class="price-row">
+                                <span>Lepas Kunci</span>
+                                <span class="price">Rp 350.000/24jam</span>
+                            </div>
+                            <div class="price-row">
+                                <span>Supir + BBM</span>
+                                <span class="price">Rp 550.000/24jam</span>
+                            </div>
+                        </div>
+                        <a href="detail.html?car=xenia" class="btn-primary">Lihat Detail</a>
+                    </div>
+                </div>
+
+                <!-- Car 5 -->
+                <div class="catalog-card">
+                    <img src="fortuner.png" alt="Toyota Fortuner">
+                    <div class="card-content">
+                        <h3>Toyota Fortuner</h3>
+                        <p class="car-type">SUV / 7 Penumpang</p>
+                        <ul class="car-features">
+                            <li>AC Digital 3 Zone</li>
+                            <li>Keyless Entry</li>
+                            <li>ABS + Stability Control</li>
+                            <li>Airbag 8 Unit</li>
+                        </ul>
+                        <div class="price-table">
+                            <div class="price-row">
+                                <span>Lepas Kunci</span>
+                                <span class="price">Rp 700.000/24jam</span>
+                            </div>
+                            <div class="price-row">
+                                <span>Supir + BBM</span>
+                                <span class="price">Rp 1.000.000/24jam</span>
+                            </div>
+                        </div>
+                        <a href="detail.html?car=fortuner" class="btn-primary">Lihat Detail</a>
+                    </div>
+                </div>
+
+                <!-- Car 6 -->
+                <div class="catalog-card">
+                    <img src="hiace.webp" alt="Hyundai I20">
+                    <div class="card-content">
+                        <h3>Hiace</h3>
+                        <p class="car-type">Mini Bus / 16 Penumpang</p>
+                        <ul class="car-features">
+                            <li>AC Digital</li>
+                            <li>Power Window Penuh</li>
+                            <li>Airbag Ganda</li>
+                            <li>Apple CarPlay</li>
+                        </ul>
+                        <div class="price-table">
+                            <div class="price-row">
+                                <span>Lepas Kunci</span>
+                                <span class="price">XXXXXX</span>
+                            </div>
+                            <div class="price-row">
+                                <span>Supir + BBM</span>
+                                <span class="price">Rp 1.650.000/24jam</span>
+                            </div>
+                        </div>
+                        <a href="detail.html?car=i20" class="btn-primary">Lihat Detail</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>ShopRent</h4>
+                    <p>Penyedia layanan rental mobil terpercaya sejak 2025</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Link Cepat</h4>
+                    <ul>
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="catalog.html">Katalog</a></li>
+                        <li><a href="booking.html">Pesan Sekarang</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Hubungi Kami</h4>
+                    <p>Telepon: 0897-0641-155</p>
+                    <p>Email: ShopRent@gmail.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ShopRent. Semua hak dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

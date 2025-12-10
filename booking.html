@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pemesanan - ShopRent</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>ShopRent</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="catalog.html">Katalog</a></li>
+                <li><a href="services.html">Layanan</a></li>
+                <li><a href="booking.html" class="active btn-nav">Pesan Sekarang</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Form Pemesanan</h1>
+            <p>Isi data di bawah untuk memesan mobil impian Anda</p>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section class="booking-section">
+        <div class="container">
+            <div class="booking-wrapper">
+                <!-- Form -->
+                <div class="booking-form">
+                    <h2>Detail Pemesanan</h2>
+                    <form id="bookingForm">
+                        <!-- Section 1: Pilih Mobil -->
+                        <div class="form-section">
+                            <h3>Pilih Mobil</h3>
+                            <div class="form-group">
+                                <label for="carSelect">Mobil yang Diinginkan *</label>
+                                <select id="carSelect" name="car" required>
+                                    <option value="">Pilih Mobil</option>
+                                    <option value="avanza">Toyota Avanza (Rp 350.000 - 550.000)</option>
+                                    <option value="jazz">Honda Jazz (Rp 450.000 - 700.000)</option>
+                                    <option value="camry">Toyota Camry (Rp 600.000 - 850.000)</option>
+                                    <option value="xenia">Daihatsu Xenia (Rp 350.000 - 55.000)</option>
+                                    <option value="fortuner">Toyota Fortuner (Rp 700.000 - 1.000.000)</option>
+                                    <option value="i20">Hiace (Rp 1.650.000)</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="packageSelect">Pilih Paket *</label>
+                                <select id="packageSelect" name="package" required>
+                                    <option value="">Pilih Paket</option>
+                                    <option value="regular">Lepas Kunci</option>
+                                    <option value="driver">Dengan Supir + BBM</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Section 2: Tanggal & Durasi -->
+                        <div class="form-section">
+                            <h3>Tanggal & Durasi</h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="pickupDate">Tanggal Penjemputan *</label>
+                                    <input type="date" id="pickupDate" name="pickupDate" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="pickupTime">Jam Penjemputan *</label>
+                                    <input type="time" id="pickupTime" name="pickupTime" required>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="returnDate">Tanggal Pengembalian *</label>
+                                    <input type="date" id="returnDate" name="returnDate" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="duration">Durasi (Hari) *</label>
+                                    <input type="number" id="duration" name="duration" min="1" value="1" required readonly>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Section 3: Data Pribadi -->
+                        <div class="form-section">
+                            <h3>Data Pribadi</h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="fullName">Nama Lengkap *</label>
+                                    <input type="text" id="fullName" name="fullName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email *</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="phone">Nomor Telepon *</label>
+                                    <input type="tel" id="phone" name="phone" pattern="[0-9]{10,}" placeholder="08xxxxxxxxxx" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="simNumber">Nomor SIM *</label>
+                                    <input type="text" id="simNumber" name="simNumber" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="ktpNumber">Nomor KTP *</label>
+                                <input type="text" id="ktpNumber" name="ktpNumber" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="address">Alamat Lengkap *</label>
+                                <textarea id="address" name="address" rows="3" required></textarea>
+                            </div>
+                        </div>
+
+                        <!-- Section 4: Opsi Tambahan -->
+                        <div class="form-section">
+                            <h3>Opsi Tambahan</h3>
+                            <div class="form-group checkbox-group">
+                                <label>
+                                    <input type="checkbox" name="insurance" id="insurance">
+                                    Asuransi Comprehensive (+Rp 100.000/hari)
+                                </label>
+                                <p class="help-text">Perlindungan maksimal untuk semua kerusakan fisik</p>
+                            </div>
+
+                            <div class="form-group checkbox-group">
+                                <label>
+                                    <input type="checkbox" name="babycar" id="babycar">
+                                    Baby Car Seat (+Rp 50.000/hari)
+                                </label>
+                                <p class="help-text">Untuk keamanan anak-anak usia 0-4 tahun</p>
+                            </div>
+
+                            <div class="form-group checkbox-group">
+                                <label>
+                                    <input type="checkbox" name="navigation" id="navigation">
+                                    GPS Navigation (+Rp 25.000/hari)
+                                </label>
+                                <p class="help-text">Sistem navigasi pintar untuk perjalanan yang lancar</p>
+                            </div>
+                        </div>
+
+                        <!-- Section 5: Pembayaran -->
+                        <div class="form-section">
+                            <h3>Metode Pembayaran</h3>
+                            <div class="form-group">
+                                <label>Pilih Metode Pembayaran *</label>
+                                <div class="payment-options">
+                                    <div class="payment-option">
+                                        <input type="radio" id="payment-bca" name="payment" value="bca" required>
+                                        <label for="payment-bca" class="payment-label">
+                                            <span class="payment-name">Transfer Bank BCA</span>
+                                            <span class="payment-desc">Proses instant</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="payment-option">
+                                        <input type="radio" id="payment-mandiri" name="payment" value="mandiri">
+                                        <label for="payment-mandiri" class="payment-label">
+                                            <span class="payment-name">Transfer Bank Mandiri</span>
+                                            <span class="payment-desc">Proses instant</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="payment-option">
+                                        <input type="radio" id="payment-gopay" name="payment" value="gopay">
+                                        <label for="payment-gopay" class="payment-label">
+                                            <span class="payment-name">GoPay / OVO</span>
+                                            <span class="payment-desc">Dompet digital</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="payment-option">
+                                        <input type="radio" id="payment-cash" name="payment" value="cash">
+                                        <label for="payment-cash" class="payment-label">
+                                            <span class="payment-name">Bayar di Tempat (Cash)</span>
+                                            <span class="payment-desc">Saat penjemputan</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Checkbox -->
+                        <div class="form-section">
+                            <div class="form-group checkbox-group">
+                                <label>
+                                    <input type="checkbox" name="agree" required>
+                                    Saya setuju dengan Syarat & Ketentuan Penggunaan
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="form-actions">
+                            <button type="reset" class="btn-secondary">Reset</button>
+                            <button type="submit" class="btn-primary btn-large">Lanjutkan Pemesanan</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Summary -->
+                <div class="booking-summary">
+                    <h3>Ringkasan Pemesanan</h3>
+                    <div class="summary-content">
+                        <div class="summary-item">
+                            <span class="label">Mobil</span>
+                            <span class="value" id="summarycar">-</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="label">Paket</span>
+                            <span class="value" id="summarypackage">-</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="label">Durasi</span>
+                            <span class="value" id="summaryduration">-</span>
+                        </div>
+                        <hr>
+                        <div class="summary-item">
+                            <span class="label">Harga Dasar</span>
+                            <span class="value" id="summarybaseprice">Rp 0</span>
+                        </div>
+                        <div class="summary-item" id="insuranceItem" style="display: none;">
+                            <span class="label">Asuransi</span>
+                            <span class="value" id="summaryinsurance">Rp 0</span>
+                        </div>
+                        <div class="summary-item" id="babycarcitem" style="display: none;">
+                            <span class="label">Baby Car Seat</span>
+                            <span class="value" id="summarybabycar">Rp 0</span>
+                        </div>
+                        <div class="summary-item" id="navigationItem" style="display: none;">
+                            <span class="label">GPS Navigation</span>
+                            <span class="value" id="summarynavigation">Rp 0</span>
+                        </div>
+                        <hr>
+                        <div class="summary-item total">
+                            <span class="label">Total Harga</span>
+                            <span class="value" id="summarytotal">Rp 0</span>
+                        </div>
+                        <p class="summary-note">*Harga belum termasuk pajak dan biaya admin jika ada</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>ShopRent</h4>
+                    <p>Penyedia layanan rental mobil terpercaya sejak 2025</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Link Cepat</h4>
+                    <ul>
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="catalog.html">Katalog</a></li>
+                        <li><a href="services.html">Layanan</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Hubungi Kami</h4>
+                    <p>Telepon: 0897-0641-155</p>
+                    <p>Email: ShopRent@gmail.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ShopRent. Semua hak dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Format Rupiah
+        function formatRupiah(number) {
+            return new Intl.NumberFormat('id-ID', {
+                style: 'currency',
+                currency: 'IDR',
+                minimumFractionDigits: 0
+            }).format(number);
+        }
+
+        // Data mobil dan harganya
+        const carPrices = {
+            avanza: { reguler: 350000, driver: 550000 },
+            jazz: { reguler: 45000, driver: 700000 },
+            camry: { reguler: 600000, driver: 850000 },
+            xenia: { reguler: 350000, driver: 550000 },
+            fortuner: { reguler: 700000, driver: 1000000 },
+            hiace: { driver: 550000 }
+        };
+
+        const additionalPrices = {
+            insurance: 100000,
+            babycar: 50000,
+            navigation: 25000
+        };
+
+        // Hitung durasi otomatis
+        document.getElementById('pickupDate').addEventListener('change', calculateDuration);
+        document.getElementById('returnDate').addEventListener('change', calculateDuration);
+
+        function calculateDuration() {
+            const pickupDate = new Date(document.getElementById('pickupDate').value);
+            const returnDate = new Date(document.getElementById('returnDate').value);
+            
+            if (pickupDate && returnDate) {
+                const duration = Math.ceil((returnDate - pickupDate) / (1000 * 60 * 60 * 24)) || 1;
+                document.getElementById('duration').value = Math.max(1, duration);
+                updateSummary();
+            }
+        }
+
+        // Update ringkasan
+        function updateSummary() {
+            const car = document.getElementById('carSelect').value;
+            const pkg = document.getElementById('packageSelect').value;
+            const duration = parseInt(document.getElementById('duration').value) || 1;
+
+            // Set teks ringkasan mobil dan paket
+            const carNames = {
+                avanza: 'Toyota Avanza',
+                jazz: 'Honda Jazz',
+                camry: 'Toyota Camry',
+                xenia: 'Daihatsu Xenia',
+                fortuner: 'Toyota Fortuner',
+                hiace: 'Hiace'
+            };
+
+            document.getElementById('summarycar').textContent = carNames[car] || '-';
+            document.getElementById('summarypackage').textContent = pkg === 'driver' ? 'Dengan Supir + BBM' : 'Sewa Reguler';
+            document.getElementById('summaryduration').textContent = duration + ' hari';
+
+            // Hitung harga
+            let totalPrice = 0;
+            if (car && pkg && carPrices[car]) {
+                const dailyPrice = carPrices[car][pkg === 'driver' ? 'driver' : 'regular'];
+                totalPrice = dailyPrice * duration;
+                document.getElementById('summarybaseprice').textContent = formatRupiah(totalPrice);
+            }
+
+            // Tambahan
+            let additionalsTotal = 0;
+            if (document.getElementById('insurance').checked) {
+                const insuranceTotal = additionalPrices.insurance * duration;
+                document.getElementById('summaryinsurance').textContent = formatRupiah(insuranceTotal);
+                document.getElementById('insuranceItem').style.display = 'flex';
+                additionalsTotal += insuranceTotal;
+            } else {
+                document.getElementById('insuranceItem').style.display = 'none';
+            }
+
+            if (document.getElementById('babycar').checked) {
+                const babycarTotal = additionalPrices.babycar * duration;
+                document.getElementById('summarybabycar').textContent = formatRupiah(babycarTotal);
+                document.getElementById('babycarcitem').style.display = 'flex';
+                additionalsTotal += babycarTotal;
+            } else {
+                document.getElementById('babycarcitem').style.display = 'none';
+            }
+
+            if (document.getElementById('navigation').checked) {
+                const navigationTotal = additionalPrices.navigation * duration;
+                document.getElementById('summarynavigation').textContent = formatRupiah(navigationTotal);
+                document.getElementById('navigationItem').style.display = 'flex';
+                additionalsTotal += navigationTotal;
+            } else {
+                document.getElementById('navigationItem').style.display = 'none';
+            }
+
+            // Total
+            const finalTotal = totalPrice + additionalsTotal;
+            document.getElementById('summarytotal').textContent = formatRupiah(finalTotal);
+        }
+
+        // Event listeners untuk update ringkasan
+        document.getElementById('carSelect').addEventListener('change', updateSummary);
+        document.getElementById('packageSelect').addEventListener('change', updateSummary);
+        document.getElementById('insurance').addEventListener('change', updateSummary);
+        document.getElementById('babycar').addEventListener('change', updateSummary);
+        document.getElementById('navigation').addEventListener('change', updateSummary);
+
+        // Form submission
+        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Terima kasih telah melakukan pemesanan!\n\nData Anda telah kami terima dan akan diproses dalam waktu 1x24 jam.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
